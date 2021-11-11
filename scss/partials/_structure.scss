@@ -75,3 +75,24 @@ section {
     background: $color-accent;
 
 }
+
+// SOCIAL SECTION
+.social{
+    background-color: #F2F2F2;
+}
+
+//TEACHERS SECTION
+.teachers-gallery{
+    display: flex;
+    justify-content: space-between;
+}
+
+.teacher{
+    p{
+
+    }
+
+    img{
+        width: 15em;
+    } 
+}
