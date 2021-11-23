@@ -158,6 +158,22 @@ body {
   padding: 0 4%;
 }
 
+.side-by-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.side-by-side .category-box {
+  position: relative;
+}
+.side-by-side .text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 body {
   font-size: 87.5%;
 }
@@ -266,7 +282,7 @@ body {
 
 section {
   padding: 4em 0;
-  margin: 0 392px;
+  margin: 0;
 }
 
 .site-header {
@@ -320,6 +336,30 @@ section {
 }
 .hero p {
   margin: 1em auto;
+}
+
+.girl-hero {
+  background-color: pink;
+  background-image: url(../img/hero-girl-faded.jpg);
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+@media (min-width: 768px) {
+  .girl-hero .content-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .girl-hero .image-box {
+    max-width: 30%;
+  }
 }
 
 .featured {

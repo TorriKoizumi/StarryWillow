@@ -5,7 +5,7 @@ body{
 
 section {
     padding: 4em 0;
-    margin: 0 392px;
+    margin: 0;
 }
 
 //Site Structure
@@ -61,6 +61,33 @@ section {
         margin: 1em auto;
     }
 }
+
+.girl-hero{
+    background-color: pink;
+    background-image: url(../img/hero-girl-faded.jpg); 
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    // min-height: 0;
+    // padding: 0;
+    
+
+    @media (min-width: $breakpoint-small) {
+        .content-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .image-box{
+            max-width: 30%;
+        }
+    }
+}
+
+
+
+
 
 //FEATURED PIECES 
 .featured{
