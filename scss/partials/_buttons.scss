@@ -5,28 +5,33 @@
     background-color: $color-link;
     color: #ffff;
     text-decoration: none;
-    padding: 1em;
+    padding: .5em;
     border-radius: 21px;
     margin: 1em 1em 1em 0;
-    width: 293px;
+    width: 310px;
     text-align: center;
+    transition: .6s all ease;
 
     &:hover{
         color: #ffff;
         background-color: $color-link-darker;
+        width: 350px;
+        transition: .3s all ease;
     }
     
 }
 
 .button-alt{
+    // background-color: pink;
     display: inline-block;
-    border-color: $color-link;
+    border-color: black;
+    border-width: 1px;
     color: $color-link;
     text-decoration: none;
-    padding: 1em;
+    padding: .5em;
     border-radius: 21px;
     margin: 1em 1em 1em 0;
-    width: 293px;
+    width: 310px;
     text-align: center;
 
     &:hover-alt{

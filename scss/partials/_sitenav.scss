@@ -1,16 +1,21 @@
 // SITE-HEADER SITENAV
 .site-header .site-nav {
 
+    
     .menu-button{
         position: absolute;
-        top: .5em;
-        left: .5em;
+        top: 1.5em;
+        left: 6em;
         margin: 0;
-        font-size: 1.5em;
-        line-height: 1;
         z-index: 20;
         cursor: pointer;
         display: flex;
+
+        h6{
+            font-family: $font-family-sans;
+            font-size: 1em;
+            line-height: 1;
+        }
 
 
 
@@ -38,7 +43,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        transform: translate(100%,0);
+        transform: translate(-100%,0);
         transition: .3s all ease-out;
         z-index: 1;
 
@@ -82,9 +87,7 @@
     }
 
     .right-nav{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        display: none;
     }
 }
 

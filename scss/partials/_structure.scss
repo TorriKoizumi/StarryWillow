@@ -1,6 +1,6 @@
 // BASIC STUFF
 body{
-    background-color: #F8F7F0;
+    background-color: $background-color;
 }
 
 section {
@@ -26,82 +26,164 @@ section {
     }
 
     h1{
+        font-family: $font-family-sans;
+        text-transform: uppercase;
         font-size: 1.5em;
         margin: 0;
     }
 
 }
 
-//Site footer
-.site-footer{
-    display: flex;
-    justify-content: center;
-    padding: 1em;
-    background-color: #292929;
-
-    a{
-        color: white;
-        text-decoration: none;
-    }
-}
 
 
 // HERO SECTION
 .hero {
-    text-align: center;
+    text-align: left;
     padding: 6em;
     min-height: 100vh;
     display: grid;
     place-items: center;
 
-    h1{
-        margin-bottom: .25em;
+    .text-box{
+        margin: 0 auto;
+
+        h1{
+            text-transform: uppercase;
+            margin-bottom: 0;
+            line-height: .8;
+        }
+        
+        h2{
+            font-size: 3.8em;
+        }
+
+        p{
+           
+        }
+
+        a{
+            margin-top: 5em;
+            text-transform: uppercase;
+        }
     }
-    p{
-        margin: 1em auto;
-    }
+    
 }
 
 .girl-hero{
-    background-color: pink;
+    // background-color: pink;
     background-image: url(../img/hero-girl-faded.jpg); 
-    background-size: 30%;
+    background-size: 45%;
     background-repeat: no-repeat;
-    background-position: left center;
-    // min-height: 0;
-    // padding: 0;
+    background-position: -370px center;
     
 
     @media (min-width: $breakpoint-small) {
         .content-box{
             display: flex;
             align-items: center;
-            justify-content: center;
+            // justify-content: center;
         }
     
         .image-box{
             max-width: 30%;
+            // align-items: left;
         }
     }
 }
 
 
-
-
-
 //FEATURED PIECES 
+
+.featured-header{
+    font-family: $font-family-sans;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 2em;
+}
+
 .featured{
     display: flex;
+    margin: 0 auto;
     justify-content: space-between;
+    max-width: 55vw;
 
+
+    .featured-piece{
+        width: 330px;
+        height: 544px;
+        background: $color-accent;
+        border-radius: $border-radius-small;
+
+    
+        img{
+           filter: drop-shadow(5px 5px 4px grey); 
+        }
+
+        .featured-type{
+            margin: 0 1.5em 0;
+
+
+            .featured-subsub{
+                opacity: 40%;
+                font-size: 1em;
+            }
+
+            .featured-sub{
+                font-family: $font-family-serif;
+                font-size: 1.7em;
+            }
+
+            .featured-price{
+                font-family: $font-family-serif;
+                font-style: italic;
+                font-size: 1.5em;
+            }
+        }
+    }
 }
 
-.featured-piece{
-    width: 315px;
-    height: 544px;
-    background: $color-accent;
+// SIDE BY SIDE
+.side-by-side{
+    display: flex;
 
+    .category-box{
+        position: relative;
+
+        img{
+            width: 50vw;
+            height: 40em;
+            object-fit: cover;
+
+            .rings{
+                object-position: 0 30px;
+                // ?????????
+                
+            }
+        }
+    }
+
+    .text-box{
+        position: absolute;
+        // background-color: red;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        h1{
+            font-style: italic;
+            text-transform: uppercase;
+            color: $background-color;
+            margin: 0;
+            line-height: .8;
+        }
+
+        a{ color: $background-color; }
+
+        p{ text-align: center; }
+
+    }
 }
+
 
 // SOCIAL SECTION
 .social{
@@ -122,4 +204,17 @@ section {
     img{
         width: 15em;
     } 
+}
+
+//Site footer
+.site-footer{
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    background-color: #292929;
+
+    a{
+        color: white;
+        text-decoration: none;
+    }
 }

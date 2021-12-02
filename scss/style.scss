@@ -10,11 +10,16 @@ $color-accent:#EBE6E0;
 $color-link:#1D252C;
 $color-link-darker:#1746ac;
 $color-accent-light: rgb(255,202,202);
+$background-color: #F8F7F0;
 
 $color-lightgrey: rgba(0,0,0,.5);
 
 $font-family-sans: 'acumin-pro', Helvetica, Arial, sansserif;
 $font-family-serif: 'garamond-premier-pro', Georgia, 'Times New Roman', Times, serif;
+$serif-header: 'garamond-premier-pro-display', 'garamond-premier-pro', Georgia, 'Times New Roman', Times, serif;
+
+$border-radius-large: 45px;
+$border-radius-small: 15px;
 
 //BREAKPOINTS
 $breakpoint-small: 768px;
