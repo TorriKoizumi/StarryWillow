@@ -113,7 +113,7 @@ section {
         height: 544px;
         background: $color-accent;
         border-radius: $border-radius-small;
-
+        margin: 0 1em;
     
         img{
            filter: drop-shadow(5px 5px 4px grey); 
@@ -182,6 +182,21 @@ section {
 
         p{ text-align: center; }
 
+    }
+}
+
+//Landing About
+.landing-about{
+    display: flex;
+    justify-content: left;
+
+    .image-box{
+        width: 50%;
+    }
+
+    .content-box{
+        margin: 0 auto;
+        text-align: center;
     }
 }
 

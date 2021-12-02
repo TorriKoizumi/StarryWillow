@@ -366,6 +366,7 @@ section {
   height: 544px;
   background: #EBE6E0;
   border-radius: 15px;
+  margin: 0 1em;
 }
 .featured .featured-piece img {
   -webkit-filter: drop-shadow(5px 5px 4px grey);
@@ -424,6 +425,22 @@ section {
   color: #F8F7F0;
 }
 .side-by-side .text-box p {
+  text-align: center;
+}
+
+.landing-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+.landing-about .image-box {
+  width: 50%;
+}
+.landing-about .content-box {
+  margin: 0 auto;
   text-align: center;
 }
 
