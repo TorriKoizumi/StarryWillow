@@ -58,7 +58,7 @@ section {
         }
 
         p{
-           
+           font-style: italic;
         }
 
         a{
@@ -70,11 +70,33 @@ section {
 }
 
 .girl-hero{
+
+    &::before{
+        background: red;
+        content: "hello";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 66vh;
+        z-index: -1;
+        margin-left: -35vh;
+        opacity: .4;
+
+        background-image: url(../img/hero-girl-faded.jpg);
+        background-size: cover;
+        background-position: 80% center;
+        @media (max-width: $breakpoint-small - 1) {
+            display: none;
+        }
+    
+    }
+
     // background-color: pink;
-    background-image: url(../img/hero-girl-faded.jpg); 
-    background-size: 45%;
-    background-repeat: no-repeat;
-    background-position: -370px center;
+    // background-image: url(../img/hero-girl-faded.jpg); 
+    // background-size: 45%;
+    // background-repeat: no-repeat;
+    // background-position: -370px center;
     
 
     @media (min-width: $breakpoint-small) {
@@ -155,9 +177,8 @@ section {
             height: 40em;
             object-fit: cover;
 
-            .rings{
-                object-position: 0 30px;
-                // ?????????
+            &.rings{
+                object-position: 50% 40%;
                 
             }
         }
@@ -204,6 +225,23 @@ section {
 // SOCIAL SECTION
 .social{
     background-color: #F2F2F2;
+
+    p{
+        font-family: serif;
+        text-transform: uppercase;
+        margin-bottom: 0px;
+    }
+
+    h1{
+        font-family: sans-serif;
+        font-weight:600;
+        text-transform: uppercase;
+        margin-bottom: .1em;
+    }
+
+    .go-follow{
+        font-family: sans-serif;
+    }
 }
 
 //TEACHERS SECTION

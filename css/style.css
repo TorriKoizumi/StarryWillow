@@ -319,16 +319,33 @@ section {
 .hero .text-box h2 {
   font-size: 3.8em;
 }
+.hero .text-box p {
+  font-style: italic;
+}
 .hero .text-box a {
   margin-top: 5em;
   text-transform: uppercase;
 }
 
-.girl-hero {
+.girl-hero::before {
+  background: red;
+  content: "hello";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 66vh;
+  z-index: -1;
+  margin-left: -35vh;
+  opacity: 0.4;
   background-image: url(../img/hero-girl-faded.jpg);
-  background-size: 45%;
-  background-repeat: no-repeat;
-  background-position: -370px center;
+  background-size: cover;
+  background-position: 80% center;
+}
+@media (max-width: 767px) {
+  .girl-hero::before {
+    display: none;
+  }
 }
 @media (min-width: 768px) {
   .girl-hero .content-box {
@@ -403,9 +420,9 @@ section {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.side-by-side .category-box img .rings {
-  -o-object-position: 0 30px;
-     object-position: 0 30px;
+.side-by-side .category-box img.rings {
+  -o-object-position: 50% 40%;
+     object-position: 50% 40%;
 }
 .side-by-side .text-box {
   position: absolute;
@@ -446,6 +463,20 @@ section {
 
 .social {
   background-color: #F2F2F2;
+}
+.social p {
+  font-family: serif;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+.social h1 {
+  font-family: sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.1em;
+}
+.social .go-follow {
+  font-family: sans-serif;
 }
 
 .teachers-gallery {
