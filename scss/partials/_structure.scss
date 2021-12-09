@@ -250,7 +250,8 @@ section {
             span{
                 display: block;
 
-                .special-italic{
+                &.special-italic{
+                    display: inline-block;
                     font-style: italic;
                     text-transform: lowercase;
                 }
