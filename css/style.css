@@ -137,7 +137,7 @@ hr {
   display: inline-block;
   border-style: solid;
   border-color: black;
-  border-width: 1px;
+  border-width: 2px;
   color: #1D252C;
   text-decoration: none;
   padding: 0.5em;
@@ -145,9 +145,15 @@ hr {
   margin: 1em 1em 1em 0;
   width: 310px;
   text-align: center;
+  -webkit-transition: 0.6s all ease;
+  transition: 0.6s all ease;
 }
-.button-alt:hover-alt {
+.button-alt:hover {
+  width: 350px;
+  border-width: 2px;
   color: #1D252C;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
 }
 
 img {
@@ -313,24 +319,31 @@ section {
   margin: 0 auto;
 }
 .hero .text-box h1 {
+  font-size: 6.5em;
   text-transform: uppercase;
-  margin-bottom: 0;
+  margin-bottom: 0.15em;
   line-height: 0.8;
+  text-align: center;
 }
 .hero .text-box h2 {
   font-size: 3.8em;
+  text-align: center;
+  margin-bottom: 0.1em;
 }
 .hero .text-box p {
   font-style: italic;
+  font-size: 1.33em;
 }
 .hero .text-box a {
-  margin-top: 5em;
   text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-top: 5em;
 }
 
 .girl-hero::before {
-  background: red;
-  content: "hello";
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -358,7 +371,8 @@ section {
             align-items: center;
   }
   .girl-hero .image-box {
-    max-width: 30%;
+    max-width: 28%;
+    height: auto;
   }
 }
 
@@ -407,6 +421,11 @@ section {
   font-size: 1.5em;
 }
 
+#featured-pieces a.button-alt {
+  display: block;
+  margin: 3em auto 1em auto;
+}
+
 #catagories {
   padding: 0;
 }
@@ -420,6 +439,7 @@ section {
   position: relative;
 }
 .side-by-side .category-box img {
+  display: block;
   width: 50vw;
   height: 40em;
   -o-object-fit: cover;
@@ -451,33 +471,64 @@ section {
 }
 
 #about {
-  background-color: #EBE6E0;
-  background-size: cover;
-  padding: 10em;
-  background-position: 80% center;
+  position: relative;
+  padding: 10em 0;
 }
 
-.landing-about {
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40vw;
+  z-index: -1;
+  background-color: #EBE6E0;
+}
+@media (max-width: 767px) {
+  #about::before {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .landing-about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .landing-about .image-box {
+    width: 50%;
+    margin: 0;
+  }
+}
+.landing-about .image-box {
+  margin-bottom: 3em;
+}
+.landing-about .content-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-.landing-about .image-box {
-  width: 50%;
-}
-.landing-about .content-box {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 auto;
   text-align: center;
 }
 .landing-about .content-box img {
+  opacity: 0.5;
   max-width: 4em;
   margin-bottom: 1.5em;
 }
@@ -487,6 +538,12 @@ section {
 }
 .landing-about .content-box h1 span {
   display: block;
+}
+.landing-about .content-box h1 span.special-italic {
+  display: inline-block;
+  font-style: italic;
+  text-transform: lowercase;
+  margin-right: 0.3em;
 }
 .landing-about .content-box h1 i {
   text-transform: lowercase;
@@ -520,10 +577,6 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.teacher img {
-  width: 15em;
 }
 
 .site-footer {
@@ -629,8 +682,13 @@ section {
           transform: translate(0, 0);
   opacity: 1;
 }
-.site-header .site-nav .right-nav {
-  display: none;
+
+.right-nav {
+  right: 6em;
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .site-footer .site-nav ul {

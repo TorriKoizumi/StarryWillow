@@ -48,22 +48,31 @@ section {
         margin: 0 auto;
 
         h1{
+            font-size: 6.5em;
             text-transform: uppercase;
-            margin-bottom: 0;
+            margin-bottom: .15em;
             line-height: .8;
+            text-align: center;
         }
         
         h2{
             font-size: 3.8em;
+            text-align: center;
+            margin-bottom: .1em;
         }
 
         p{
            font-style: italic;
+           font-size: 1.33em;
         }
 
         a{
-            margin-top: 5em;
             text-transform: uppercase;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            margin-top: 5em;
+
         }
     }
     
@@ -72,8 +81,8 @@ section {
 .girl-hero{
 
     &::before{
-        background: red;
-        content: "hello";
+        // background: red;
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -86,7 +95,7 @@ section {
         background-image: url(../img/hero-girl-faded.jpg);
         background-size: cover;
         background-position: 80% center;
-        @media (max-width: $breakpoint-small - 1) {
+        @media (max-width: ($breakpoint-small - 1)) {
             display: none;
         }
     
@@ -107,8 +116,8 @@ section {
         }
     
         .image-box{
-            max-width: 30%;
-            // align-items: left;
+            max-width: 28%;
+            height: auto;
         }
     }
 }
@@ -165,6 +174,10 @@ section {
     }
 }
 
+#featured-pieces a.button-alt{
+    display: block;
+    margin: 3em auto 1em auto;
+}
 // SIDE BY SIDE
 
 #catagories{
@@ -178,6 +191,7 @@ section {
         position: relative;
 
         img{
+            display: block;
             width: 50vw;
             height: 40em;
             object-fit: cover;
@@ -212,28 +226,52 @@ section {
 }
 
 //Landing About
-
 #about{
-    background-color: $color-accent;
-    background-size: cover;
-    padding: 10em;
-    background-position: 80% center;
+    position: relative;
+    padding: 10em 0;
+}
 
-    @media (max-width: $breakpoint-small - 1) {
+#about::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 40vw;
+    z-index: -1;
+
+    background-color: $color-accent;
+
+    @media (max-width: ($breakpoint-small - 1)) {
         display: none;
+    }
 }
 
 .landing-about{
-    display: flex;
-    justify-content: left;
-    align-content: center;
+    @media (min-width: $breakpoint-small) {
+        display: flex;
+        justify-content: left;
+        align-content: center;
 
-    .image-box{
-        width: 50%;
+        .image-box{
+            width: 50%;
+            margin: 0;
+        }
     }
 
+    .image-box{
+        margin-bottom: 3em;
+    }
+
+    
+
+
+
     .content-box{
+        display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         margin: 0 auto;
         text-align: center;
 
@@ -254,6 +292,7 @@ section {
                     display: inline-block;
                     font-style: italic;
                     text-transform: lowercase;
+                    margin-right: .3em;
                 }
             }
 
@@ -303,15 +342,15 @@ section {
     justify-content: space-between;
 }
 
-.teacher{
-    p{
+// .teacher{
+//     p{
 
-    }
+//     }
 
-    img{
-        width: 15em;
-    } 
-}
+//     img{
+//         width: 15em;
+//     } 
+// }
 
 //Site footer
 .site-footer{
@@ -325,4 +364,4 @@ section {
         text-decoration: none;
     }
 
-} 
+}

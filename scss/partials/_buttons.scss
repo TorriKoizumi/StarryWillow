@@ -17,16 +17,18 @@
         background-color: $color-link-darker;
         width: 350px;
         transition: .3s all ease;
+        
     }
     
 }
 
 .button-alt{
     // background-color: pink;
+
     display: inline-block;
     border-style: solid;
     border-color: black;
-    border-width: 1px;
+    border-width: 2px;
     color: $color-link;
     text-decoration: none;
     padding: .5em;
@@ -34,9 +36,13 @@
     margin: 1em 1em 1em 0;
     width: 310px;
     text-align: center;
+    transition: .6s all ease;
 
-    &:hover-alt{
+    &:hover {
+        width: 350px;
+        border-width: 2px;
         color: $color-link;
+        transition: .3s all ease;
 
     }
     

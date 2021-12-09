@@ -86,9 +86,13 @@
         }
     }
 
-    .right-nav{
-        display: none;
-    }
+}
+
+.right-nav{
+    right: 6em;
+    background-color: red;
+    display: flex;
+
 }
 
 
