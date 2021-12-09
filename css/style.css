@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 {
   font-family: "garamond-premier-pro-display", "garamond-premier-pro", Georgia, "Times New Roman", Times, serif;
-  font-size: 7em;
+  font-size: 6em;
   line-height: 1;
 }
 
@@ -135,6 +135,7 @@ hr {
 
 .button-alt {
   display: inline-block;
+  border-style: solid;
   border-color: black;
   border-width: 1px;
   color: #1D252C;
@@ -406,6 +407,10 @@ section {
   font-size: 1.5em;
 }
 
+#catagories {
+  padding: 0;
+}
+
 .side-by-side {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -445,6 +450,13 @@ section {
   text-align: center;
 }
 
+#about {
+  background-color: #EBE6E0;
+  background-size: cover;
+  padding: 10em;
+  background-position: 80% center;
+}
+
 .landing-about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -452,18 +464,39 @@ section {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .landing-about .image-box {
   width: 50%;
 }
 .landing-about .content-box {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 auto;
   text-align: center;
 }
+.landing-about .content-box img {
+  max-width: 4em;
+  margin-bottom: 1.5em;
+}
+.landing-about .content-box h1 {
+  font-size: 4em;
+  text-transform: uppercase;
+}
+.landing-about .content-box h1 span {
+  display: block;
+}
+.landing-about .content-box h1 i {
+  text-transform: lowercase;
+  margin-right: 0.2em;
+}
 
-.social {
+#social {
   background-color: #F2F2F2;
 }
+
 .social p {
   font-family: serif;
   text-transform: uppercase;
@@ -475,8 +508,9 @@ section {
   text-transform: uppercase;
   margin-bottom: 0.1em;
 }
-.social .go-follow {
+.social .lowercase {
   font-family: sans-serif;
+  text-transform: lowercase;
 }
 
 .teachers-gallery {

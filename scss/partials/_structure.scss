@@ -166,6 +166,11 @@ section {
 }
 
 // SIDE BY SIDE
+
+#catagories{
+    padding: 0;
+}
+
 .side-by-side{
     display: flex;
 
@@ -207,24 +212,70 @@ section {
 }
 
 //Landing About
+
+#about{
+    background-color: $color-accent;
+    background-size: cover;
+    padding: 10em;
+    background-position: 80% center;
+
+    @media (max-width: $breakpoint-small - 1) {
+        display: none;
+}
+
 .landing-about{
     display: flex;
     justify-content: left;
+    align-content: center;
 
     .image-box{
         width: 50%;
     }
 
     .content-box{
+        justify-content: center;
         margin: 0 auto;
         text-align: center;
+
+        img{
+            opacity: .5; 
+            max-width: 4em;
+            margin-bottom: 1.5em;  
+        }
+        
+        h1{
+            font-size: 4em;
+            text-transform: uppercase;
+
+            span{
+                display: block;
+
+                .special-italic{
+                    font-style: italic;
+                    text-transform: lowercase;
+                }
+            }
+
+            i {
+                text-transform: lowercase;
+                margin-right: .2em;
+            }
+        }
+
+    
     }
 }
 
 
 // SOCIAL SECTION
-.social{
+
+#social{
     background-color: #F2F2F2;
+    // padding: 2em;
+}
+
+.social{
+    
 
     p{
         font-family: serif;
@@ -239,8 +290,9 @@ section {
         margin-bottom: .1em;
     }
 
-    .go-follow{
+    .lowercase{
         font-family: sans-serif;
+        text-transform: lowercase;
     }
 }
 
@@ -271,4 +323,5 @@ section {
         color: white;
         text-decoration: none;
     }
-}
+
+} 
