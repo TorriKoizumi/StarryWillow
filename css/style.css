@@ -284,7 +284,7 @@ section {
 
 .site-header {
   position: absolute;
-  padding: 1em;
+  padding: 1em 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,6 +305,10 @@ section {
   text-transform: uppercase;
   font-size: 1.5em;
   margin: 0;
+}
+
+.site-id {
+  text-align: center;
 }
 
 .hero {
@@ -406,16 +410,31 @@ section {
 }
 .featured .featured-piece .featured-type {
   margin: 0 1.5em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .featured .featured-piece .featured-type .featured-subsub {
   opacity: 40%;
   font-size: 1em;
 }
-.featured .featured-piece .featured-type .featured-sub {
+.featured .featured-piece .featured-type .name-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.featured .featured-piece .featured-type .name-price .featured-sub {
   font-family: "garamond-premier-pro", Georgia, "Times New Roman", Times, serif;
   font-size: 1.7em;
 }
-.featured .featured-piece .featured-type .featured-price {
+.featured .featured-piece .featured-type .name-price .featured-price {
   font-family: "garamond-premier-pro", Georgia, "Times New Roman", Times, serif;
   font-style: italic;
   font-size: 1.5em;
@@ -595,17 +614,24 @@ section {
 }
 
 .site-header .site-nav .menu-button {
-  position: absolute;
+  position: fixed;
   top: 1.5em;
-  left: 6em;
+  left: 5%;
   margin: 0;
   z-index: 20;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: transparent;
+  border: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.site-header .site-nav .menu-button h6 {
+.site-header .site-nav .menu-button span {
+  display: inline-block;
+  margin-left: 1em;
   font-family: "acumin-pro", Helvetica, Arial, sansserif;
   font-size: 1em;
   line-height: 1;
@@ -621,7 +647,7 @@ section {
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: brown;
+  background-color: black;
   position: fixed;
   top: 0;
   right: 0;
@@ -647,7 +673,7 @@ section {
   z-index: 1;
 }
 .site-header .site-nav li {
-  font-size: 4vw;
+  font-size: 5vw;
   min-width: 20vw;
   -webkit-transform: translate(10%, 0);
           transform: translate(10%, 0);
@@ -655,23 +681,22 @@ section {
   transition: 0.3s all ease-out 0.3s;
   opacity: 0;
 }
+.site-header .site-nav #menubar-top, .site-header .site-nav #menubar-bottom {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
 .site-header .site-nav[data-navstate=open] .menu-button {
   position: fixed;
 }
 .site-header .site-nav[data-navstate=open] #menubar-top {
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transform: translate(7px, 7px) rotate(-45deg);
-          transform: translate(7px, 7px) rotate(-45deg);
-}
-.site-header .site-nav[data-navstate=open] #menubar-middle {
-  opacity: 0;
+  -webkit-transform: translate(3px, 4px) rotate(-45deg);
+          transform: translate(3px, 4px) rotate(-45deg);
+  fill: #F8F7F0;
 }
 .site-header .site-nav[data-navstate=open] #menubar-bottom {
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transform: translate(0, -4px) rotate(45deg);
-          transform: translate(0, -4px) rotate(45deg);
+  -webkit-transform: translate(3px, -4px) rotate(45deg);
+          transform: translate(3px, -4px) rotate(45deg);
+  fill: #F8F7F0;
 }
 .site-header .site-nav[data-navstate=open] ul {
   -webkit-transform: translate(0, 0);
@@ -682,13 +707,36 @@ section {
           transform: translate(0, 0);
   opacity: 1;
 }
+.site-header .site-nav[data-navstate=open] li span {
+  font-family: "garamond-premier-pro-display", "garamond-premier-pro", Georgia, "Times New Roman", Times, serif;
+  font-size: 0.5em;
+  color: #F8F7F0;
+  margin-right: 0.2em;
+}
+.site-header .site-nav[data-navstate=open] li a {
+  color: #F8F7F0;
+  font-family: "garamond-premier-pro-display", "garamond-premier-pro", Georgia, "Times New Roman", Times, serif;
+}
 
 .right-nav {
-  right: 6em;
-  background-color: red;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.right-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.right-nav li {
+  margin: 0;
+  padding: 0em;
+}
+.right-nav a {
+  padding: 0.75em;
 }
 
 .site-footer .site-nav ul {
