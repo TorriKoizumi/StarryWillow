@@ -18,6 +18,8 @@ section {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    position: fixed;
+    z-index: 5;
 
     
 
@@ -149,6 +151,7 @@ section {
     justify-content: space-between;
     max-width: 55vw;
 
+    //INDIVIDUAL MODULE
 
     .featured-piece{
         width: 330px;
@@ -156,15 +159,18 @@ section {
         background: $color-accent;
         border-radius: $border-radius-small;
         margin: 0 1em;
+        display: flex;
     
         img{
-           filter: drop-shadow(5px 5px 4px grey); 
+            align-self: center;
+            filter: drop-shadow(5px 5px 4px grey); 
         }
 
         .featured-type{
             margin: 0 1.5em 0;
             display: flex;
             flex-direction: column;
+            align-self: flex-end;
 
 
             .featured-subsub{
