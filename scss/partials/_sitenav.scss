@@ -136,25 +136,77 @@
 
 //Footer Site Nav
 .site-footer .site-nav{
+    min-width: 80vw;
+    padding: 0 4%;
+    margin-top: 3em;
+    display: flex;
+    margin-bottom: 1em;
+
+    .list{
+        margin-left: 4em;
+
+       ul{
+            display: flex;
+            flex-direction: column;
+            margin-top: 0;
+            
+       }
+    }
 
     h1{
         font-family: $font-family-sans;
         text-transform: uppercase;
-        font-size: 1.5em;
+        font-size: 1.75em;
         margin: 0;
+        color: white;
+        flex-grow: 1;
+        text-align: left;
     }
-    
-    ul{
+
+    h4{
+        font-family: $font-family-sans;
+        font-weight: 600;
+        color: white;
         margin: 0;
+        text-align: right;
+        margin-bottom: 1em;
+    }
+
+    ul{
+        
+        // min-width: 20vw;
         padding: 0;
         list-style: none;
         display: flex;
 
-    }
-    a{
-        display: inline-block;
-        padding: 1em;
-        line-height: 1;
 
     }
+
+    li{
+        font-weight:100;
+        text-align: right;
+    }
+
+    a{
+        display: inline-block;
+        padding: .5em 0;
+        line-height: 1;
+    }
+
+
+}
+
+.site-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1em;
+    background-color: #292929;
+    min-height: 15em;
+
+    a{
+        color: white;
+        text-decoration: none;
+    }
+
 }

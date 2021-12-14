@@ -146,20 +146,21 @@ section {
 }
 
 .featured{
+
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
     max-width: 55vw;
+    // min-width: 10vw;
 
     //INDIVIDUAL MODULE
 
     .featured-piece{
-        width: 330px;
-        height: 544px;
+        width: 40em;
+        height: 25em;
         background: $color-accent;
         border-radius: $border-radius-small;
         margin: 0 1em;
-        display: flex;
     
         img{
             align-self: center;
@@ -285,6 +286,7 @@ section {
 
     .image-box{
         margin-bottom: 3em;
+        align-self: center;
     }
 
     
@@ -376,16 +378,3 @@ section {
 //     } 
 // }
 
-//Site footer
-.site-footer{
-    display: flex;
-    justify-content: center;
-    padding: 1em;
-    background-color: #292929;
-
-    a{
-        color: white;
-        text-decoration: none;
-    }
-
-}
